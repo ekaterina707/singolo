@@ -90,3 +90,88 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.about-us {
+    height: 734px;
+    background-color: #f2f2f2;
+    padding: 59px 0 0 0;
+    border-bottom: 6px solid #fff;
+}
+
+.about-us__title {
+    font-size: 30px;
+    color: #666d89;
+    font-weight: 900;
+    text-align: left;
+}
+
+.about-us__descr {
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-weight: 300;
+    text-align: left;
+    margin-top: 19px;
+}
+
+.about-us__block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 43px;
+}
+
+.about-us__item {
+    width: 301px;
+}
+
+.item__title {
+    font-size: 18px;
+    color: #666d89;
+    font-weight: 900;
+    text-align: left;
+    margin-top: 11px;
+}
+
+.item__descr {
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 7px;
+}
+
+.item__social-block {
+    display: flex;
+    justify-content: space-between;
+    width: 152px;
+    margin-top: 21px;
+}
+
+.facebook {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background: url("assets/img/about-us/Facebook.svg");
+}
+
+.google {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background: url("assets/img/about-us/Google.svg");
+}
+
+.twitter {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background: url("assets/img/about-us/Twitter.svg");
+}
+
+.linkedin {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background: url("assets/img/about-us/LinkedIn.svg");
+}

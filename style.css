@@ -563,11 +563,11 @@ footer {
     }
     
     .about-us__item {
-        max-width: 218px;
+        width: 218px;
     }
 
     .about-us__item img {
-        max-width: 218px;
+        width: 218px;
     }
 
     form {
@@ -584,6 +584,22 @@ footer {
 /* mobile */
 
 @media screen and (max-width: 375px) {
+
+    .container {
+        padding: 0 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .slider__box {
+        padding: 0;
+    }
     
     .phone-vertical img {
         width: 89px;
@@ -593,5 +609,41 @@ footer {
     .phone-horizontal img {
         width: 178px;
         height: 89px;
+    }
+
+    .portfolio__item {
+        width: 151px;
+        height: 128px;
+    }
+
+    .about-us__item {
+        width: 314px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .about-us__item img {
+        width: 314px;
+    }
+
+    .get-a-quote__block {
+        flex-direction: column;
+    }
+
+    .get-a-quote__contact {
+        margin: 20px 0 0 0;
+    }
+
+    form {
+        width: 315px;
+    }
+
+    input {
+        width: 315px;
+        height: 38px;
+    }
+
+    .footer__copyright {
+        display: none;
     }
 }

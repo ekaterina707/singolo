@@ -92,8 +92,9 @@ a.navbar_active {
 }
 
 .slider {
+    width: 100%;
+    overflow: hidden;
     position: relative;
-    height: 600px;
     background-color: #f06c64;
     padding: 39px 0 47px 0;
     border-bottom: 6px solid #ea676b;
@@ -102,32 +103,25 @@ a.navbar_active {
 .slider__box {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
 }
 
 .arrow-left {
     transform: rotate(180deg);
-    position: absolute;
-    top: 280px;
-    left: 40px;
 }
 
-.arrow-rigth {
-    position: absolute;
-    top: 280px;
-    right: 42px;
-}
-
-.phone-vertical {
+/* .phone-vertical {
     position: absolute;
     top: 53px;
     left: 113px;
-}
+} */
 
-.phone-horizontal {
+/* .phone-horizontal {
     position: absolute;
     top: 174px;
     left: 425px;
-}
+} */
 
 .arrow-left:hover, .arrow-rigth:hover {
     cursor: pointer;
@@ -199,7 +193,6 @@ a.navbar_active {
 }
 
 .portfolio {
-    height: 870px;
     background-color: #2d303a;
     padding: 50px 0;
     border-bottom: 6px solid #323746;
@@ -261,8 +254,8 @@ a.navbar_active {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    overflow: hidden;
-    max-height: 600px;
+    /* overflow: hidden; */
+    /* max-height: 600px; */
     margin-top: 20px;
 }
 
@@ -282,9 +275,8 @@ a.navbar_active {
 }
 
 .about-us {
-    min-height: 734px;
     background-color: #f2f2f2;
-    padding: 59px 0 0 0;
+    padding: 59px 0 30px 0;
     border-bottom: 6px solid #fff;
 }
 
@@ -368,10 +360,9 @@ a.navbar_active {
 }
 
 .get-a-quote {
-    height: 654px;
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
-    padding: 50px 0 0 0;
+    padding: 50px 0;
 }
 
 .get-a-quote__title {
@@ -399,10 +390,12 @@ a.navbar_active {
 
 form {
     width: 620px;
+    display: flex;
+    flex-direction: column;
 }
 
 input {
-    width: 619px;
+    width: 620px;
     height: 38px;
     border-radius: 5px;
     border: none;
@@ -425,8 +418,7 @@ input {
 }
 
 #project {
-    width: 619px;
-    height: 202px;
+    max-height: 202px;
     border-radius: 5px;
     border: none;
     background-color: #d6564f;
@@ -546,4 +538,60 @@ footer {
 
 .footer__social:hover {
     cursor: pointer;
+}
+
+/* tablet */
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .phone-vertical img {
+        width: 181px;
+        height: 364px;
+    }
+
+    .phone-horizontal img {
+        width: 364px;
+        height: 181px;
+    }
+
+    .portfolio__block {
+        justify-content: space-around;
+    }
+    
+    .about-us__item {
+        max-width: 218px;
+    }
+
+    .about-us__item img {
+        max-width: 218px;
+    }
+
+    form {
+        width: 442px;
+    }
+
+    input {
+        width: 442px;
+        height: 38px;
+    }
+
+}
+
+/* mobile */
+
+@media screen and (max-width: 375px) {
+    
+    .phone-vertical img {
+        width: 89px;
+        height: 178px;
+    }
+
+    .phone-horizontal img {
+        width: 178px;
+        height: 89px;
+    }
 }

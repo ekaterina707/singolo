@@ -16,6 +16,7 @@ body {
 }
 
 header {
+    position: sticky;
     max-width: 1020px;
     height: 95px;
     width: 100%;
@@ -64,7 +65,7 @@ h1 {
 .navbar__list li {
     list-style-type: none;
     position: relative;
-} 
+}
 
 .navbar__list li a {
     font-size: 12px;
@@ -72,6 +73,10 @@ h1 {
     font-weight: 700;
     text-decoration: none;
     letter-spacing: -0.2px;
+}
+
+a.navbar_active {
+    color: #f06c64!important;
 }
 
 .navbar__list li::after {
@@ -82,11 +87,7 @@ h1 {
     color: #494e62;
 }
 
-.navbar__list:nth-child(5)::after {
-    display: none;
-}
-
-.navbar__list li a:hover {
+.navbar__list li a:not(.navbar_active):hover {
     color: #f06c64;
 }
 
@@ -241,9 +242,16 @@ h1 {
     font-weight: 400;
     text-align: center;
     letter-spacing: -0.3px;
+    outline-style: none;
 }
 
-.portfolio__tags button:hover {
+.portfolio_active {
+    cursor: pointer!important;
+    color: #dedede!important;
+    border: 1px solid #c5c5c5!important;
+}
+
+.portfolio__tags button:not(.portfolio_active):hover {
     cursor: pointer;
     color: #dedede;
     border: 1px solid #c5c5c5;
@@ -442,6 +450,27 @@ input {
 .form_button:hover {
     cursor: pointer;
     background-color: #b85853;
+}
+
+#message-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0008;
+}
+
+#message-block.hidden {
+    display: none;
+}
+
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid black;
+    text-align: center;
 }
 
 .get-a-quote__contact {

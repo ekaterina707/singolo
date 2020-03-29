@@ -13,8 +13,8 @@
             <div class="header">
                 <h1><span>singolo</span><span class="star">*</span></h1>
                 <nav class="navbar">
-                    <ul class="navbar__list">
-                        <li><a href="#home">HOME</a></li>
+                    <ul class="navbar__list" id="menu">
+                        <li><a  class="navbar_active" href="#home">HOME</a></li>
                         <li><a href="#services">SERVICES</a></li>
                         <li><a href="#portfolio">PORTFOLIO</a></li>
                         <li><a href="#about">ABOUT</a></li>
@@ -89,8 +89,8 @@
         <div class="container">
             <h2 class="portfolio__title">Portfolio</h2>
             <p class="portfolio__descr">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            <div class="portfolio__tags">
-                <button>All</button>
+            <div class="portfolio__tags" id="tags">
+                <button class="portfolio_active">All</button>
                 <button>Web Design</button>
                 <button>Graphic Design</button>
                 <button>Artwork</button>
@@ -159,12 +159,20 @@
             <h2 class="get-a-quote__title">Get a Quote</h2>
             <p class="get-a-quote__descr">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="get-a-quote__block">
-                <form method="POST">
+                <form>
                         <input type="text" name="user-name" id="user-name" placeholder="Name (Required)" required>
                         <input type="email" name="user-email" id="user-email" placeholder="Email (Required)" required>
                         <input type="text" name="subject" id="subject" placeholder="Subject">
                         <textarea name="project" id="project" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-                        <button class="form_button">Submit</button>
+                        <button class="form_button" id="btn">Submit</button>
+                        <div id="message-block" class="hidden">
+                            <div id="message">
+                                <p class="message-letter">The letter was sent</p>
+                                <p class="message-subject">Subject: <span id="message-subject"></span></p>
+                                <p class="message-descr">Description: <span id="message-descr"></span></p>
+                                <button id="close-btn">OK</button>
+                            </div>
+                        </div>
                 </form>
                 <div class="get-a-quote__contact" id="contact">
                     <h3 class="contact__title">Contact Information</h3>

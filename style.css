@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    width: 1020px;
+    max-width: 1020px;
     margin: 0 auto;
 }
 
@@ -16,11 +16,20 @@ body {
 }
 
 header {
+    position: sticky;
+    max-width: 1020px;
     height: 95px;
     width: 100%;
     background-color: #2d303a;
     padding: 28px 38px 32px 40px;
     border-bottom: 6px solid #323746;
+    z-index: 1;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
 
 .header {
@@ -56,7 +65,7 @@ h1 {
 .navbar__list li {
     list-style-type: none;
     position: relative;
-} 
+}
 
 .navbar__list li a {
     font-size: 12px;
@@ -64,6 +73,10 @@ h1 {
     font-weight: 700;
     text-decoration: none;
     letter-spacing: -0.2px;
+}
+
+a.navbar_active {
+    color: #f06c64!important;
 }
 
 .navbar__list li::after {
@@ -74,11 +87,7 @@ h1 {
     color: #494e62;
 }
 
-.navbar__list:nth-child(5)::after {
-    display: none;
-}
-
-.navbar__list li a:hover {
+.navbar__list li a:not(.navbar_active):hover {
     color: #f06c64;
 }
 
@@ -125,7 +134,7 @@ h1 {
 }
 
 .services {
-    height: 500px;
+    min-height: 500px;
     background-color: #f2f2f2;
     padding: 60px 0;
     border-bottom: 6px solid #ffffff;
@@ -157,7 +166,7 @@ h1 {
 
 .services__item {
     position: relative;
-    width: 33.33333%;
+    max-width: 33.33333%;
     padding-left: 79px;
     overflow: hidden;
     max-width: 300px;
@@ -233,9 +242,16 @@ h1 {
     font-weight: 400;
     text-align: center;
     letter-spacing: -0.3px;
+    outline-style: none;
 }
 
-.portfolio__tags button:hover {
+.portfolio_active {
+    cursor: pointer!important;
+    color: #dedede!important;
+    border: 1px solid #c5c5c5!important;
+}
+
+.portfolio__tags button:not(.portfolio_active):hover {
     cursor: pointer;
     color: #dedede;
     border: 1px solid #c5c5c5;
@@ -266,7 +282,7 @@ h1 {
 }
 
 .about-us {
-    height: 734px;
+    min-height: 734px;
     background-color: #f2f2f2;
     padding: 59px 0 0 0;
     border-bottom: 6px solid #fff;
@@ -291,6 +307,7 @@ h1 {
 .about-us__block {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 43px;
 }
 
@@ -433,6 +450,27 @@ input {
 .form_button:hover {
     cursor: pointer;
     background-color: #b85853;
+}
+
+#message-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0008;
+}
+
+#message-block.hidden {
+    display: none;
+}
+
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid black;
+    text-align: center;
 }
 
 .get-a-quote__contact {
